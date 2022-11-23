@@ -67,7 +67,7 @@ app.get('/callback', (req, res) => {
                 const refresh_token = body.refresh_token
     
                 return res.redirect(
-                    `${FRONTEND_URI}/?${querystring.stringify({
+                    `${FRONTEND_URI}?${querystring.stringify({
                         access_token,
                         refresh_token
                     })}`
