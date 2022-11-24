@@ -22,7 +22,7 @@ app.get("/authorize", (req, res) => {
     // StackOverflow https://stackoverflow.com/questions/10726909/random-alpha-numeric-string-in-javascript#12502559
     const state = Array(16).fill(0).map((x) => Math.random().toString(36).charAt(2)).join("");
 
-    const scope = 'user-read-private user-read-email user-read-recently-played user-top-read user-follow-read user-follow-modify playlist-read-private playlist-read-collaborative playlist-modify-public'
+    const scope = 'user-read-private user-read-email user-read-recently-played user-top-read user-follow-read'
 
     return res.redirect('https://accounts.spotify.com/authorize?' + 
         querystring.stringify({
